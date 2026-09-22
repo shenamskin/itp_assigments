@@ -4,14 +4,18 @@ using namespace std;
 
 int main(){
     int number;
+    int i = 1;
 
+    cout << "Enter the number: ";
     cin >> number;
 
-    for (int i = 1; i <= number; i++){
+    for (; i <= number; i++){
         if (i % 7 == 0 && i % 9 == 0){
-            cout << i;
-            return 0;
+            cout << "First number: " << i;
+            break;
         }
     }
-    cout << "there's not number division by 7 and 9";
+    if (i % 7 != 0 || i % 9 != 0){
+        cout << "\nNo number found";
+    }
 }
